@@ -7,9 +7,10 @@ export class Home extends React.Component {
 
     return (
       <div>
-        <p>Name: {this.props.user.name}</p>
-        <h4>User's Hobbies</h4>
-        <ul>{this.props.user.hobbies.map((hobby, i) => <li key={i}>{hobby}</li>)}</ul>
+      <p>This is the Home Component</p>  
+        <p>Name: {this.props.name}</p>
+        <p>Age: {this.props.age}</p>
+      <button className="btn btn-primary">Make me older!</button>
       </div>
     );
   }
