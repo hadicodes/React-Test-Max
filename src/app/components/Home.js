@@ -29,6 +29,12 @@ export class Home extends React.Component {
   onChangeLink() {
     this.props.changeLink(this.state.homeLink)
   }
+
+  onHandleChange(event) {
+    this.setState({
+      homeLink: event.target.value
+    })
+  }
  
   render() {
     return (
@@ -40,7 +46,7 @@ export class Home extends React.Component {
         <hr />
         <button onClick={this.props.greet}>Say Hello</button>
         <hr />
-        <input type="text" value={this.props.initialLinkName}/>
+        <input type="text" value={this.state.homeLink} onChange={event => this.onHandleChange(event)}/>
         <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header</button>
       </div>
     );
