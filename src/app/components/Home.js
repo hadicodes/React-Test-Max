@@ -40,6 +40,7 @@ export class Home extends React.Component {
         <hr />
         <button onClick={this.props.greet}>Say Hello</button>
         <hr />
+        <input type="text" value={this.props.initialLinkName}/>
         <button onClick={this.onChangeLink.bind(this)} className="btn btn-primary">Change Header</button>
       </div>
     );
